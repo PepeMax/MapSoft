@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'newevent', loadChildren: './pages/newevent/newevent.module#NeweventPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
+  { path: 'account-request', loadChildren: './pages/account-request/account-request.module#AccountRequestPageModule' },
 
 ];
 @NgModule({

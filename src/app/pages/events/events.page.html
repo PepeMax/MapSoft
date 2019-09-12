@@ -22,34 +22,34 @@
     <ion-card-title>{{event?.name_events}}</ion-card-title>
     <ion-card-content>
       <ion-list *ngIf="!learnMore[i]">
-        Association : {{event?.association_name}} <br>
-        Date : {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}<br>
-        Lieux : {{event.city}} <br>
-        Prix : {{event.price}}€<br>
+        <p>Association : {{event?.association_name}}</p>
+        <p>Date : du {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}</p>
+        <p>Lieux : {{event.city}} </p>
+        <p>Prix : {{event.price}}€</p>
       </ion-list>
       <ion-list *ngIf="learnMore[i]">
-        Association : {{event?.association_name}} <br>
-        <!-- &Eacute;vénement : Dominicale <br><br> -->
-        Date : {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}<br>
+        <p>Association : {{event?.association_name}}</p>
+
+        <p>Date : du {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}</p>
         
-        Type de terrain : {{event.field_type}}<br><br>
+        <p>Type de terrain : {{event.field_type}}</p><br>
 
-        Adresse du terrain : {{event.field_adress}} <br>
-        Lieux : {{event.city}}, {{event.zip_code}}<br><br>
+        <p>Adresse du terrain : {{event.field_adress}}</p>
+        <p>Lieux : {{event.city}}, {{event.zip_code}}</p><br>
 
-        Contact Orga : {{event.referee_lastname}} {{event.referee_firstname}}<br>
-        {{event.referee_mail}}<br>
-        {{referee_tel}}<br><br>
+        <p>Contact Orga : {{event.referee_lastname}} {{event.referee_firstname}}</p>
+        <p>{{event.referee_mail}}</p>
+        <p>{{event.referee_tel}}</p><br>
 
-        Prix : {{event.price}}€<br><br>
+        <p>Prix : {{event.price}}€</p>
 
-        Url de réservation : <a href="{{event.url}}">{{event.url}}</a><br><br>
+        <p>Url de réservation : <a href="{{event.url}}">{{event.url}}</a></p><br>
 
-        Infos complémentaires : <br>
-        {{event.infos_events}}<br><br>
+        <p>Infos complémentaires : <br>
+        {{event.infos_events}}</p><br>
 
-        Régles : <br>
-        {{event.rules_events}}
+        <p>Régles : <br>
+        {{event.rules_events}}</p>
       </ion-list>
 
       <div class="center">

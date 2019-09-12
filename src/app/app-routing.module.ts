@@ -8,9 +8,9 @@ const routes: Routes = [
   },
   { path: 'map', loadChildren: './pages/map/map.module#MapPageModule' },
   { path: 'events', loadChildren: './pages/events/events.module#EventsPageModule' },
-  { path: 'schedule', loadChildren: './pages/schedule/schedule.module#SchedulePageModule' },
   { path: 'newevent', loadChildren: './pages/newevent/newevent.module#NeweventPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
 
 ];
 @NgModule({

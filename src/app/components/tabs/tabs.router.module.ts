@@ -28,12 +28,12 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'schedule',
+        path: 'settings',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../../pages/schedule/schedule.module').then(m => m.SchedulePageModule)
+              import('../../pages/settings/settings.module').then(m => m.SettingsPageModule)
           }
         ]
       },

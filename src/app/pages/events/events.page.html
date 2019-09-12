@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button *ngIf="authToken" color="dark" slot="start" fill="clear" (click)="editEvent()">
+      <ion-icon name="color-wand"></ion-icon>
+    </ion-button>
+    <ion-title>&Eacute;venement à venir</ion-title>
+    <ion-button *ngIf="authToken" color="dark" slot="end" fill="clear" (click)="addEvent()">
+      <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar animated></ion-searchbar>
+
+  <ion-card *ngFor="let event of events;let i = index;">
+    <ion-card-title>{{event?.name_events}}</ion-card-title>
+    <ion-card-content>
+      <ion-list *ngIf="!learnMore[i]">
+        Association : {{event?.association_name}} <br>
+        Date : {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}<br>
+        Lieux : {{event.city}} <br>
+        Prix : {{event.price}}€<br>
+      </ion-list>
+      <ion-list *ngIf="learnMore[i]">
+        Association : {{event?.association_name}} <br>
+        <!-- &Eacute;vénement : Dominicale <br><br> -->
+        Date : {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}<br>
+        
+        Type de terrain : {{event.field_type}}<br><br>
+
+        Adresse du terrain : {{event.field_adress}} <br>
+        Lieux : {{event.city}}, {{event.zip_code}}<br><br>
+
+        Contact Orga : {{event.referee_lastname}} {{event.referee_firstname}}<br>
+        {{event.referee_mail}}<br>
+        {{referee_tel}}<br><br>
+
+        Prix : {{event.price}}€<br><br>
+
+        Url de réservation : <a href="{{event.url}}">{{event.url}}</a><br><br>
+
+        Infos complémentaires : <br>
+        {{event.infos_events}}<br><br>
+
+        Régles : <br>
+        {{event.rules_events}}
+      </ion-list>
+
+      <div class="center">
+        <ion-button *ngIf="!learnMore[i]" size="small" fill="clear" (click)="onClickLearnMore(i)">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="center">
+        <ion-button *ngIf="learnMore[i]" size="small" fill="clear" (click)="onClickLearnMore(i)">
+          <ion-icon name="remove-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+  <br>
+
+  <ion-card>
+    <ion-card-title>AvA</ion-card-title>
+    <ion-card-content>
+
+      <ion-list *ngIf="!ButtonClicked">
+        Association : AVA <br>
+        Date : 15/09/19 à 08h00 au 16/09/19 à 18h00<br>
+        Lieux : Cazaux <br>
+        Prix : 10€ <br>
+      </ion-list>
+
+      <ion-list *ngIf="ButtonClicked">
+        Association : AVA <br>
+        &Eacute;vénement : Dominicale <br><br>
+        Date : 15/09/19 à 08h00 au 16/09/19 à 18h00<br>
+        Type de terrain : Forêt<br><br>
+        Adresse du terrain : 47 route du béguey<br>
+        Lieux : Salles, 33770<br><br>
+        Contact Orga : DENOST Maxime<br>
+        maxime.denost@laposte.net<br>
+        07 69 96 69 70<br><br>
+        Prix : 10€ <br><br>
+        Url de réservation : <a href="toto.com/reservation">toto.com/reservation</a><br><br>
+        Infos complémentaires : Pas de tenue exigé<br><br>
+        Régles : Fps max : 400 FPS<br>
+        PA Interdit<br>
+
+      </ion-list>
+
+      <div class="center">
+        <ion-button *ngIf="!ButtonClicked" size="small" fill="clear" (click)="onButtonSet()">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="center">
+        <ion-button *ngIf="ButtonClicked" size="small" fill="clear" (click)="onButtonSet()">
+          <ion-icon name="remove-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-card-title>CQB</ion-card-title>
+    <ion-card-content>
+      Association : Triger <br>
+      Date : 19/10/19 à 08h00 au 23/10/19 à 18h00<br>
+      Lieux : Toulouse <br>
+      Prix : 30€ <br>
+      <div class="center">
+        <ion-button size="small" fill="clear">En savoir +</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>LoL</ion-card-title>
+    <ion-card-content>
+      Association : blecha <br>
+      Date : 01/12/19 à 08h00 au 02/12/19 à 18h00<br>
+      Lieux : Russie <br>
+      Prix : 1555550 € <br>
+      <div class="center">
+        <ion-button size="small" fill="clear">En savoir +</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card> -->
+
+
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

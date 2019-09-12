@@ -1,0 +1,28 @@
+ion-content {
+    --background : grey;
+}
+
+ion-grid {
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+ion-card {
+ //   background-color: white;
+    width: 90vw;
+    box-shadow: none !important;
+}
+
+ion-row {
+    margin: 5%;
+}
+
+ion-item {
+    width: 80vw;
+    --border-width: 1px ;
+    --border-style: solid ;
+}
+
+ion-button {
+    width: 80vw;
+}

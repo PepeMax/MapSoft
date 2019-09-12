@@ -16,9 +16,9 @@ export class EventsPage implements OnInit {
 
   constructor(public navCtrl: NavController, public storage: Storage) { }
 
-  async doRefresh(lol) {
+  async doRefresh(val) {
     setTimeout(() => {
-      lol.target.complete();
+      val.target.complete();
     }, 2000);
     this.events = JSON.parse(await this.storage.get('events'));
   }

@@ -8,7 +8,7 @@
   <div class=map>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab *ngIf="authToken" vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button color="danger">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>

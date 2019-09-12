@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-
+  
+  public badge = Math.floor(Math.random() * 100) + 1;
+  
   constructor() {}
 
 }

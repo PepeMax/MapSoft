@@ -24,9 +24,8 @@ export class AccountRequestPage implements OnInit {
   }
 
   async okRegister() {
-    // this.toatsvalue = this.trans.instant('ACCOUNT_REQUEST.REGISTER_REQUEST');
     const toast = await this.toastController.create({
-      message: 'LOL',
+      message: this.toatsvalue,
       duration: 2000
     });
     toast.present();
@@ -39,67 +38,67 @@ export class AccountRequestPage implements OnInit {
         {
           name: 'lastname',
           type: 'text',
-          placeholder: 'NOM'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.LAST_NAME')
         },
         {
           name: 'firstname',
           type: 'text',
-          placeholder: 'Prénom'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.FIRST_NAME')
         },
         {
           name: 'function',
           type: 'text',
-          placeholder: 'Fonction dans l association ou entreprise'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.FUNCTION')
         },
         {
           name: 'society',
           type: 'text',
-          placeholder: 'Nom de l association ou société'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.SOCIETY')
         },
         {
           name: 'mail',
           type: 'email',
-          placeholder: 'je-t-ai-touche@tu-es-out.com'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.MAIL')
         },
         {
           name: 'tel',
           type: 'tel',
-          placeholder: '01 02 03 04 05'
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.TEL')
         },
         {
           name: 'field_type',
           type: 'text',
-          placeholder: 'Type de terrain (Forêt, CQB, ...)',
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.FIELD_TYPE')
         },
         {
           name: 'field_adress',
           type: 'text',
-          placeholder: 'Adresse du terrain',
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.FIELD_ADRESS')
         },
         {
           name: 'field_city',
           type: 'text',
-          placeholder: 'Ville du terrain',
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.FIELD_CITY')
         },
 
         {
           name: 'members',
           type: 'number',
-          placeholder: 'Nombre de membres',
+          placeholder: this.trans.instant('ACCOUNT_REQUEST.MEMBERS'),
           min: 1,
           value: 1,
         },
       ],
       buttons: [
         {
-          text: 'Cancel',
+          text: this.trans.instant('COMMON.CANCEL'),
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => {
-            console.log('Confirm Cancel');
+            console.log('Annulé');
           }
         }, {
-          text: 'Ok',
+          text: this.trans.instant('COMMON.OK'),
           handler: (alertData) => {
             console.log('set mail');
             console.log(JSON.stringify(alertData));

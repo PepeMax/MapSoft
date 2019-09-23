@@ -11,7 +11,8 @@
         "NO": "Non",
         "FROM": "du ",
         "TO": "au ",
-        "AT": "à"
+        "AT": "à",
+        "OK": "OK"
     },
     "EVENTS": {
         "TITLE": "Événements",
@@ -73,6 +74,17 @@
         "TEXT5": "Comme dit plus haut chaque demande est vérifiée, donc pour chaque demande nous recevons des données de traçabilités.",
         "BAN": "Tous abus pourront engendrer un ban permanent de l’application.",
         "CREATE_ACCOUNT": "Créer un compte",
+
+        "LAST_NAME": "NOM",
+        "FIRST_NAME": "Prénom",
+        "FUNCTION": "Fonction dans l'association ou entreprise",
+        "SOCIETY": "Nom de l'association ou société",
+        "MAIL": "je-t-ai-touche@tu-es-out.com",
+        "TEL": "Donne ton 06",
+        "FIELD_TYPE": "Type de terrain (Forêt, CQB, ...)",
+        "FIELD_ADRESS": "Adresse du terrain",
+        "FIELD_CITY": "Ville du terrain",
+        "MEMBERS": "Nombre de membres" ,
 
         "REGISTER_REQUEST": "Votre demande de compte à bien était prise en charge"
     }

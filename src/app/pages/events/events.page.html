@@ -3,7 +3,7 @@
     <ion-button *ngIf="authToken" color="dark" slot="start" fill="clear" (click)="editEvent()">
       <ion-icon name="color-wand"></ion-icon>
     </ion-button>
-    <ion-title>&Eacute;venement à venir</ion-title>
+    <ion-title>{{'EVENTS.TITLE' | translate}} </ion-title>
     <ion-button *ngIf="authToken" color="dark" slot="end" fill="clear" (click)="addEvent()">
       <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
     </ion-button>
@@ -22,42 +22,42 @@
     <ion-card-title>{{event?.name_events}}</ion-card-title>
     <ion-card-content>
       <ion-list *ngIf="!learnMore[i]">
-        <p>Association : {{event?.association_name}}</p>
-        <p>Date : du {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}</p>
-        <p>Lieux : {{event.city}} </p>
-        <p>Prix : {{event.price}}€</p>
+        <p>{{'EVENTS.SOCIETY' | translate}} {{event?.association_name}}</p>
+        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}} {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timeend_events | date: 'hh:mm'}}</p>
+        <p>{{'EVENTS.PLACE' | translate}} {{event.city}} </p>
+        <p>{{'EVENTS.PRICE' | translate}} {{event.price}}€</p>
       </ion-list>
       <ion-list *ngIf="learnMore[i]">
-        <p>Association : {{event?.association_name}}</p>
+        <p>{{'EVENTS.SOCIETY' | translate}} {{event?.association_name}}</p>
 
-        <p>Date : du {{event.datestart_events | date: 'dd/MM/yy'}} à {{event.timestart_events | date: 'hh:mm'}} au {{event.dateend_events | date: 'dd/MM/yy'}} à {{event.timeend_events | date: 'hh:mm'}}</p>
+        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}} {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timeend_events | date: 'hh:mm'}}</p>
         
-        <p>Type de terrain : {{event.field_type}}</p><br>
+        <p>{{'EVENTS.FIELD_TYPE' | translate}} {{event.field_type}}</p><br>
 
-        <p>Adresse du terrain : {{event.field_adress}}</p>
-        <p>Lieux : {{event.city}}, {{event.zip_code}}</p><br>
+        <p>{{'EVENTS.FIELD_ADRESS' | translate}} {{event.field_adress}}</p>
+        <p>{{'EVENTS.PLACE' | translate}} {{event.city}}, {{event.zip_code}}</p><br>
 
-        <p>Contact Orga : {{event.referee_lastname}} {{event.referee_firstname}}</p>
+        <p>{{'EVENTS.CONTACT' | translate}} {{event.referee_lastname}} {{event.referee_firstname}}</p>
         <p>{{event.referee_mail}}</p>
         <p>{{event.referee_tel}}</p><br>
 
-        <p>Prix : {{event.price}}€</p>
+        <p>{{'EVENTS.PRICE' | translate}} {{event.price}}€</p>
+      
+        <p>{{'EVENTS.URL' | translate}} <a href="{{event.url}}">{{event.url}}</a></p><br>
 
-        <p>Url de réservation : <a href="{{event.url}}">{{event.url}}</a></p><br>
-
-        <p>Infos complémentaires : <br>
+        <p>{{'EVENTS.INFOS' | translate}} <br>
         {{event.infos_events}}</p><br>
 
-        <p>Régles : <br>
+        <p>{{'EVENTS.RULES' | translate}}<br>
         {{event.rules_events}}</p>
       </ion-list>
 
-      <div class="center">
+      <div class="ion-text-center">
         <ion-button *ngIf="!learnMore[i]" size="small" fill="clear" (click)="onClickLearnMore(i)">
           <ion-icon name="add-circle-outline"></ion-icon>
         </ion-button>
       </div>
-      <div class="center">
+      <div class="ion-text-center">
         <ion-button *ngIf="learnMore[i]" size="small" fill="clear" (click)="onClickLearnMore(i)">
           <ion-icon name="remove-circle-outline"></ion-icon>
         </ion-button>
@@ -65,78 +65,6 @@
 
     </ion-card-content>
   </ion-card>
-  <br>
-
-  <ion-card>
-    <ion-card-title>AvA</ion-card-title>
-    <ion-card-content>
-
-      <ion-list *ngIf="!ButtonClicked">
-        Association : AVA <br>
-        Date : 15/09/19 à 08h00 au 16/09/19 à 18h00<br>
-        Lieux : Cazaux <br>
-        Prix : 10€ <br>
-      </ion-list>
-
-      <ion-list *ngIf="ButtonClicked">
-        Association : AVA <br>
-        &Eacute;vénement : Dominicale <br><br>
-        Date : 15/09/19 à 08h00 au 16/09/19 à 18h00<br>
-        Type de terrain : Forêt<br><br>
-        Adresse du terrain : 47 route du béguey<br>
-        Lieux : Salles, 33770<br><br>
-        Contact Orga : DENOST Maxime<br>
-        maxime.denost@laposte.net<br>
-        07 69 96 69 70<br><br>
-        Prix : 10€ <br><br>
-        Url de réservation : <a href="toto.com/reservation">toto.com/reservation</a><br><br>
-        Infos complémentaires : Pas de tenue exigé<br><br>
-        Régles : Fps max : 400 FPS<br>
-        PA Interdit<br>
-
-      </ion-list>
-
-      <div class="center">
-        <ion-button *ngIf="!ButtonClicked" size="small" fill="clear" (click)="onButtonSet()">
-          <ion-icon name="add-circle-outline"></ion-icon>
-        </ion-button>
-      </div>
-      <div class="center">
-        <ion-button *ngIf="ButtonClicked" size="small" fill="clear" (click)="onButtonSet()">
-          <ion-icon name="remove-circle-outline"></ion-icon>
-        </ion-button>
-      </div>
-
-    </ion-card-content>
-  </ion-card>
-
-  <!-- <ion-card>
-    <ion-card-title>CQB</ion-card-title>
-    <ion-card-content>
-      Association : Triger <br>
-      Date : 19/10/19 à 08h00 au 23/10/19 à 18h00<br>
-      Lieux : Toulouse <br>
-      Prix : 30€ <br>
-      <div class="center">
-        <ion-button size="small" fill="clear">En savoir +</ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-title>LoL</ion-card-title>
-    <ion-card-content>
-      Association : blecha <br>
-      Date : 01/12/19 à 08h00 au 02/12/19 à 18h00<br>
-      Lieux : Russie <br>
-      Prix : 1555550 € <br>
-      <div class="center">
-        <ion-button size="small" fill="clear">En savoir +</ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card> -->
-
-
 </ion-content>
 
 <ion-footer>

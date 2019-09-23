@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button fill="clear" (click)="goBack()">
+    <ion-button fill="clear" (click)="cancel()">
       <ion-icon slot="icon-only" name="arrow-dropleft"></ion-icon>
     </ion-button>
-    <ion-title>Nouvel &Eacute;v&eacute;nement</ion-title>
+    <ion-title>{{'NEW_EVENTS.TITLE' | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Nom de l'événement</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.NAME_EVENT' | translate}}</ion-label>
         <ion-input [(ngModel)]="newEvent.name_events" required="true"></ion-input>
       </ion-item>
     </ion-row>
@@ -20,13 +20,13 @@
 
     <ion-row>
       <ion-item>
-        <ion-label>Date de début :</ion-label>
+        <ion-label>{{'NEW_EVENTS.DATE_START' | translate}}</ion-label>
         <ion-datetime [(ngModel)]="newEvent.datestart_events" placeholder="01-01-0000" displayFormat="DD MMMM YYYY"
           monthNames="Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Décembre">
         </ion-datetime>
       </ion-item>
       <ion-item>
-        <ion-label>Heure de début :</ion-label>
+        <ion-label>{{'NEW_EVENTS.HOURS_START' | translate}}</ion-label>
         <ion-datetime [(ngModel)]="newEvent.timestart_events" placeholder="00:00" displayFormat="HH:mm" value="08:00"></ion-datetime>
       </ion-item>
     </ion-row>
@@ -34,13 +34,13 @@
 
     <ion-row>
       <ion-item>
-        <ion-label>Date de fin :</ion-label>
+        <ion-label>{{'NEW_EVENTS.DATE_END' | translate}}</ion-label>
         <ion-datetime [(ngModel)]="newEvent.dateend_events" placeholder="02-01-0000" displayFormat="DD MMMM YYYY" [value]="today"
           monthNames="Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Décembre">
         </ion-datetime>
       </ion-item>
       <ion-item>
-        <ion-label>Heure de fin :</ion-label>
+        <ion-label>{{'NEW_EVENTS.HOURS_END' | translate}}</ion-label>
         <ion-datetime [(ngModel)]="newEvent.timeend_events" placeholder="00:00" displayFormat="HH:mm" value="18:00"></ion-datetime>
       </ion-item>
     </ion-row>
@@ -48,7 +48,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label>Type de terrain</ion-label>
+        <ion-label>{{'NEW_EVENTS.FIELD_TYPE' | translate}}</ion-label>
         <ion-select [(ngModel)]="newEvent.field_type" placeholder="Forêt, CQB, ...">
           <ion-select-option value="jungle">Forêt</ion-select-option>
           <ion-select-option value="cqb">CQB</ion-select-option>
@@ -60,7 +60,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Adresse du terrain</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.FIELD_ADRESS' | translate}}</ion-label>
         <ion-input [(ngModel)]="newEvent.field_adress"></ion-input>
       </ion-item>
     </ion-row>
@@ -69,13 +69,13 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label position="stacked">Ville</ion-label>
+          <ion-label position="stacked">{{'NEW_EVENTS.CITY' | translate}}</ion-label>
           <ion-input [(ngModel)]="newEvent.city"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col>
         <ion-item>
-          <ion-label position="stacked">Code Postal</ion-label>
+          <ion-label position="stacked">{{'NEW_EVENTS.ZIP_CODE' | translate}}</ion-label>
           <ion-input [(ngModel)]="newEvent.zip_code" type="tel" maxlength="5"></ion-input>
         </ion-item>
       </ion-col>
@@ -84,7 +84,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Nom de l'association</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.SOCIETY' | translate}}</ion-label>
         <ion-input [(ngModel)]="newEvent.association_name"></ion-input>
       </ion-item>
     </ion-row>
@@ -92,19 +92,19 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Contact Orga</ion-label>
-        <ion-input [(ngModel)]="newEvent.referee_lastname" placeholder="Nom" required="true"></ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_firstname" placeholder="Prénom" required="true"></ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_mail" placeholder="Adresse mail" type="email" required="true" spellcheck="true">
+        <ion-label position="stacked">{{'NEW_EVENTS.CONTACT' | translate}}</ion-label>
+        <ion-input [(ngModel)]="newEvent.referee_lastname" placeholder="{{'NEW_EVENTS.LAST_NAME' | translate}}" required="true"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_firstname" placeholder="{{'NEW_EVENTS.FIRST_NAME' | translate}}" required="true"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_mail" placeholder="{{'NEW_EVENTS.MAIL' | translate}}" type="email" required="true" spellcheck="true">
         </ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_tel" placeholder="Numéro de téléphone" type="tel" required="true" spellcheck="true" maxlength="10"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_tel" placeholder="{{'NEW_EVENTS.TEL' | translate}}" type="tel" required="true" spellcheck="true" maxlength="10"></ion-input>
       </ion-item>
     </ion-row>
     <br><br>
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Prix :</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.PRICE' | translate}}</ion-label>
         <ion-input [(ngModel)]="newEvent.price" type="number"></ion-input>
       </ion-item>
     </ion-row>
@@ -112,7 +112,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Url pour réservation :</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.URL' | translate}}</ion-label>
         <ion-input [(ngModel)]="newEvent.url" type="url"></ion-input>
       </ion-item>
     </ion-row>
@@ -120,7 +120,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Infos complémentaires</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.INFOS' | translate}}</ion-label>
         <ion-textarea [(ngModel)]="newEvent.infos_events"></ion-textarea>
       </ion-item>
     </ion-row>
@@ -128,7 +128,7 @@
 
     <ion-row>
       <ion-item>
-        <ion-label position="stacked">Règles</ion-label>
+        <ion-label position="stacked">{{'NEW_EVENTS.RULES' | translate}}</ion-label>
         <ion-textarea [(ngModel)]="newEvent.rules_events"></ion-textarea>
       </ion-item>
     </ion-row>
@@ -137,8 +137,8 @@
   </ion-grid>
   
   <div class="new_events">
-    <ion-button>Annuler</ion-button>
-    <ion-button (click)="submit()">Ajouter l'événement</ion-button>
+    <ion-button (click)=cancel()>{{'COMMON.CANCEL' | translate}}</ion-button>
+    <ion-button (click)="submit()">{{'NEW_EVENTS.ADD_EVENT' | translate}}</ion-button>
   </div>
 
 </ion-content>

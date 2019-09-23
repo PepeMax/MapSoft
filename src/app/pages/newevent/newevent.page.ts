@@ -43,7 +43,7 @@ export class NeweventPage implements OnInit {
 
   }
 
-  goBack() {
+  cancel() {
     this.navCtrl.navigateRoot(['tabs', 'events']);
   }
 
@@ -75,7 +75,7 @@ export class NeweventPage implements OnInit {
       })
       .finally(() => {
         this.presentToast();
-        this.goBack();
+        this.cancel();
       });
   }
 

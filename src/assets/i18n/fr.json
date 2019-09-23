@@ -1,10 +1,79 @@
 {
-    "TITLE"         : "Bonjour Monsieur",
-    
-    "TITLE_2"       : "Bonjour {{value}}",
-    
-    "description"   : "Ooohh .... vous venez de traduire ce texte?",
-    
-    "data"          :{"name": "je m'appelle {{name_value}}"}
-    
+
+    "COMMON": {
+        "MONEY": "€",
+        "CLOSE": "Fermer",
+        "RETURN": "Retour",
+        "CANCEL": "Annuler",
+        "VALIDATE": "Valider",
+        "MODIFY": "Modifier",
+        "YES": "Oui",
+        "NO": "Non",
+        "FROM": "du ",
+        "TO": "au ",
+        "AT": "à"
+    },
+    "EVENTS": {
+        "TITLE": "Événements",
+        "COME": "Événements à venir :",
+        "SOCIETY": "Association :",
+        "DATE": "Date : du",
+        "PLACE": "Lieux :",
+        "PRICE": "Prix :",
+        "FIELD_TYPE": "Type de terrain :",
+        "FIELD_ADRESS": "Adresse du terrain :",
+        "CONTACT": "Contact Orga :",
+        "URL": "Url de reservation :",
+        "INFOS": "Infos complémentaire :",
+        "RULES": "Règles :"
+    },
+    "NEW_EVENTS": {
+        "TITLE": "Nouvel événements",
+        "NAME_EVENT": "Nom de l'événement :",
+        "DATE_START": "Date de début :",
+        "DATE_END": "Date de fin :",
+        "HOURS_START": "Heure de début :",
+        "HOURS_END": "Heure de fin :",
+        "FIELD_TYPE": "Type de terrain :",
+        "FIELD_ADRESS": "Adresse du terrain :",
+        "CITY": "Ville :",
+        "ZIP_CODE": "Code postal :",
+        "SOCIETY": "Nom de l'association :",
+        "CONTACT": "Contact Orga :",
+        "PRICE": "Prix :",
+        "URL": "Url pour reservation :",
+        "INFOS": "Infos complémentaire :",
+        "RULES": "Règles :",
+        "ADD_EVENT": "Ajouter l'événement",
+        
+        "LAST_NAME": "Nom",
+        "FIRST_NAME": "Prénom",
+        "MAIL": "Email",
+        "TEL": "Numéro de téléphone"
+    },
+    "SETTINGS": {
+        "TITLE": "Paramètres",
+        "PSEUDO": "Pseudo",
+        "TEAM": "Équipe",
+        "MAIL": "Email",
+        "SAVE": "Sauvegarder",
+        "DARK_MODE": "Mode sombre",
+        "CONNECTION": "Connexion",
+        "DISCONNECT": "Déconnexion"
+    },
+
+    "ACCOUNT_REQUEST": {
+        "TITLE": "Demande de compte",
+        "PRESENTATION": "Vous allez effectuer une demande de création de compte",
+        "WARNING": "Attention",
+        "TEXT1": "Cette application est dédiée en premier lieux aux joueurs d’Airsoft et en second aux associations et organisateurs de parties.",
+        "TEXT2": "Les comptes sont dédiés seulement aux membres d'associations d'Airsoft ou personnes qui proposent aux joueurs des terrains et des parties.",
+        "TEXT3": "Toutes les demandes de comptes sont vérifiées, c’est nous qui créons les comptent et qui fournissons l’identifiant et le mot de passe pour se connecter.",
+        "TEXT4": "C’est pourquoi nous demandons à tous les utilisateurs de MapSoft de respecter ceci, nous demandons aux utilisateurs de ne pas abuser de cette fonction.",
+        "TEXT5": "Comme dit plus haut chaque demande est vérifiée, donc pour chaque demande nous recevons des données de traçabilités.",
+        "BAN": "Tous abus pourront engendrer un ban permanent de l’application.",
+        "CREATE_ACCOUNT": "Créer un compte",
+
+        "REGISTER_REQUEST": "Votre demande de compte à bien était prise en charge"
     }
+}

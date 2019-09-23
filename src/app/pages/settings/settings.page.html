@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Settings</ion-title>
+    <ion-title>{{'SETTINGS.TITLE' | translate}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,21 +9,21 @@
 
     <ion-row>
       <ion-item lines="none">
-        <ion-label position="fixed">Pseudo</ion-label>
+        <ion-label position="fixed">{{'SETTINGS.PSEUDO' | translate}}</ion-label>
         <ion-input [(ngModel)]="pseudo" required="true"></ion-input>
       </ion-item>
     </ion-row>
 
     <ion-row>
       <ion-item lines="none">
-        <ion-label position="fixed">Team</ion-label>
+        <ion-label position="fixed">{{'SETTINGS.TEAM' | translate}} </ion-label>
         <ion-input [(ngModel)]="team" required="true"></ion-input>
       </ion-item>
     </ion-row>
 
     <ion-row>
       <ion-item lines="none">
-        <ion-label position="fixed">Mail</ion-label>
+        <ion-label position="fixed">{{'SETTINGS.MAIL' | translate}}</ion-label>
         <ion-input [(ngModel)]="mail" required="true"></ion-input>
       </ion-item>
     </ion-row>
@@ -32,7 +32,7 @@
 
   <div class="centerButton">
     <ion-button (click)="setval()">
-      <ion-label>Sauvegarder</ion-label>
+      <ion-label>{{'SETTINGS.SAVE' | translate}} </ion-label>
       <ion-icon name="save"></ion-icon>
     </ion-button>
   </div>
@@ -40,24 +40,25 @@
 
   <ion-item>
     <ion-toggle color="dark" [(ngModel)]="darkVal"></ion-toggle>
-    <ion-label>Dark Mode</ion-label>
+    <ion-label>{{'SETTINGS.DARK_MODE' | translate}} </ion-label>
   </ion-item>
+
 </ion-content>
 
 <ion-footer>
   <div *ngIf="!authToken" class="centerButton">
     <ion-button (click)="goLogin()">
-      <ion-label>Connexion</ion-label>
+      <ion-label>{{'SETTINGS.CONNECTION' | translate}} </ion-label>
       <ion-icon name="log-in"></ion-icon>
     </ion-button>
     <ion-button (click)="accountRequest()">
-      <ion-label>Demande de compte</ion-label>
+      <ion-label>{{'ACCOUNT_REQUEST.TITLE' | translate}} </ion-label>
       <ion-icon name="body"></ion-icon>
     </ion-button>
   </div>
   <div *ngIf="authToken" class="centerButton">
     <ion-button (click)="logout()">
-      <ion-label>Déconnexion</ion-label>
+      <ion-label>{{'SETTINGS.DISCONNECT' | translate}} </ion-label>
       <ion-icon name="jet"></ion-icon>
     </ion-button>
   </div>

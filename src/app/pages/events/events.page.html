@@ -23,15 +23,21 @@
     <ion-card-content>
       <ion-list *ngIf="!learnMore[i]">
         <p>{{'EVENTS.SOCIETY' | translate}} {{event?.association_name}}</p>
-        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}} {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timeend_events | date: 'hh:mm'}}</p>
+        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}}
+          {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}}
+          {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}}
+          {{event.timeend_events | date: 'hh:mm'}}</p>
         <p>{{'EVENTS.PLACE' | translate}} {{event.city}} </p>
         <p>{{'EVENTS.PRICE' | translate}} {{event.price}}€</p>
       </ion-list>
       <ion-list *ngIf="learnMore[i]">
         <p>{{'EVENTS.SOCIETY' | translate}} {{event?.association_name}}</p>
 
-        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}} {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}} {{event.timeend_events | date: 'hh:mm'}}</p>
-        
+        <p>{{'EVENTS.DATE' | translate}} {{event.datestart_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}}
+          {{event.timestart_events | date: 'hh:mm'}} {{'COMMON.TO' | translate}}
+          {{event.dateend_events | date: 'dd/MM/yy'}} {{'COMMON.AT' | translate}}
+          {{event.timeend_events | date: 'hh:mm'}}</p>
+
         <p>{{'EVENTS.FIELD_TYPE' | translate}} {{event.field_type}}</p><br>
 
         <p>{{'EVENTS.FIELD_ADRESS' | translate}} {{event.field_adress}}</p>
@@ -42,14 +48,14 @@
         <p>{{event.referee_tel}}</p><br>
 
         <p>{{'EVENTS.PRICE' | translate}} {{event.price}}€</p>
-      
+
         <p>{{'EVENTS.URL' | translate}} <a href="{{event.url}}">{{event.url}}</a></p><br>
 
         <p>{{'EVENTS.INFOS' | translate}} <br>
-        {{event.infos_events}}</p><br>
+          {{event.infos_events}}</p><br>
 
         <p>{{'EVENTS.RULES' | translate}}<br>
-        {{event.rules_events}}</p>
+          {{event.rules_events}}</p>
       </ion-list>
 
       <div class="ion-text-center">

@@ -1,19 +1,19 @@
 .new_events {
-    text-align: center;
-    padding-bottom: 5%;
-    
-    ion-button {
-        --border-width: 50%;
-        --border-radius : 2em;
-        --background: rgb(38, 38, 38);
-        --background-activated: rgb(102, 102, 102);
-    } 
+  text-align: center;
+  padding-bottom: 5%;
+
+  ion-button {
+    --border-width: 50%;
+    --border-radius: 2em;
+    --background: rgb(38, 38, 38);
+    --background-activated: rgb(102, 102, 102);
+  }
 }
 
 ion-card {
-    border: solid 1px;
+  border: solid 1px;
 }
 ion-card-title {
-    text-align: center;
-    padding-top: 10px; 
+  text-align: center;
+  padding-top: 10px;
 }

@@ -27,7 +27,8 @@
       </ion-item>
       <ion-item>
         <ion-label>{{'NEW_EVENTS.HOURS_START' | translate}}</ion-label>
-        <ion-datetime [(ngModel)]="newEvent.timestart_events" placeholder="00:00" displayFormat="HH:mm" value="08:00"></ion-datetime>
+        <ion-datetime [(ngModel)]="newEvent.timestart_events" placeholder="00:00" displayFormat="HH:mm" value="08:00">
+        </ion-datetime>
       </ion-item>
     </ion-row>
     <br><br>
@@ -35,13 +36,15 @@
     <ion-row>
       <ion-item>
         <ion-label>{{'NEW_EVENTS.DATE_END' | translate}}</ion-label>
-        <ion-datetime [(ngModel)]="newEvent.dateend_events" placeholder="02-01-0000" displayFormat="DD MMMM YYYY" [value]="today"
+        <ion-datetime [(ngModel)]="newEvent.dateend_events" placeholder="02-01-0000" displayFormat="DD MMMM YYYY"
+          [value]="today"
           monthNames="Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Décembre">
         </ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label>{{'NEW_EVENTS.HOURS_END' | translate}}</ion-label>
-        <ion-datetime [(ngModel)]="newEvent.timeend_events" placeholder="00:00" displayFormat="HH:mm" value="18:00"></ion-datetime>
+        <ion-datetime [(ngModel)]="newEvent.timeend_events" placeholder="00:00" displayFormat="HH:mm" value="18:00">
+        </ion-datetime>
       </ion-item>
     </ion-row>
     <br><br>
@@ -93,11 +96,15 @@
     <ion-row>
       <ion-item>
         <ion-label position="stacked">{{'NEW_EVENTS.CONTACT' | translate}}</ion-label>
-        <ion-input [(ngModel)]="newEvent.referee_lastname" placeholder="{{'NEW_EVENTS.LAST_NAME' | translate}}" required="true"></ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_firstname" placeholder="{{'NEW_EVENTS.FIRST_NAME' | translate}}" required="true"></ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_mail" placeholder="{{'NEW_EVENTS.MAIL' | translate}}" type="email" required="true" spellcheck="true">
+        <ion-input [(ngModel)]="newEvent.referee_lastname" placeholder="{{'NEW_EVENTS.LAST_NAME' | translate}}"
+          required="true"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_firstname" placeholder="{{'NEW_EVENTS.FIRST_NAME' | translate}}"
+          required="true"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_mail" placeholder="{{'NEW_EVENTS.MAIL' | translate}}" type="email"
+          required="true" spellcheck="true">
         </ion-input>
-        <ion-input [(ngModel)]="newEvent.referee_tel" placeholder="{{'NEW_EVENTS.TEL' | translate}}" type="tel" required="true" spellcheck="true" maxlength="10"></ion-input>
+        <ion-input [(ngModel)]="newEvent.referee_tel" placeholder="{{'NEW_EVENTS.TEL' | translate}}" type="tel"
+          required="true" spellcheck="true" maxlength="10"></ion-input>
       </ion-item>
     </ion-row>
     <br><br>
@@ -135,7 +142,7 @@
     <br><br>
 
   </ion-grid>
-  
+
   <div class="new_events">
     <ion-button (click)=cancel()>{{'COMMON.CANCEL' | translate}}</ion-button>
     <ion-button (click)="submit()">{{'NEW_EVENTS.ADD_EVENT' | translate}}</ion-button>

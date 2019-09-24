@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AccountRequestPage implements OnInit {
 
-  toatsvalue  = this.trans.instant('ACCOUNT_REQUEST.REGISTER_REQUEST');
+  toatsvalue = this.trans.instant('ACCOUNT_REQUEST.REGISTER_REQUEST');
 
   constructor(public navCtrl: NavController, public alertController: AlertController, public toastController: ToastController, public trans: TranslateService) { }
 
@@ -103,7 +103,7 @@ export class AccountRequestPage implements OnInit {
             console.log('set mail');
             console.log(JSON.stringify(alertData));
             this.okRegister();
-            
+
 
           }
         }
@@ -112,6 +112,6 @@ export class AccountRequestPage implements OnInit {
 
     await alert.present();
   }
-  
+
 
 }

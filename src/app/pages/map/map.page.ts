@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit {
-  
+
   public authToken: boolean = false;
 
   constructor(public storage: Storage) { }

@@ -23,4 +23,4 @@ const routes: Routes = [
   ],
   declarations: [MapPage]
 })
-export class MapPageModule {}
+export class MapPageModule { }

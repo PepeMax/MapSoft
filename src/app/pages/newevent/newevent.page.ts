@@ -5,7 +5,7 @@ import { ConditionalExpr } from '@angular/compiler';
 import { ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Event } from 'src/app/model/event.model';
-
+import { NeweventService } from '../../services/newevent.service';
 
 @Component({
   selector: 'app-newevent',
@@ -39,8 +39,14 @@ export class NeweventPage implements OnInit {
     rules_events: ''
   }
 
-  constructor(public navCtrl: NavController, public toastController: ToastController, public storage: Storage,) {
+  constructor(
+    public navCtrl: NavController,
+    public toastController: ToastController,
+    public storage: Storage,
+    public neweventService: NeweventService,
+  ) { }
 
+  ngOnInit() {
   }
 
   cancel() {
@@ -54,7 +60,6 @@ export class NeweventPage implements OnInit {
     });
     toast.present();
   }
-
 
   async submit() {
     let oldEvents: any[] = JSON.parse(await this.storage.get('events'));
@@ -77,9 +82,7 @@ export class NeweventPage implements OnInit {
         this.presentToast();
         this.cancel();
       });
+    let events: any[] = JSON.parse(await this.storage.get('events'));
+    this.neweventService.AddEventsOnServer(events);
   }
-
-  ngOnInit() {
-  }
-
 }

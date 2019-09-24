@@ -1,6 +1,10 @@
 @keyframes blink {
-  from {color: black;}
-  to {color: red;}
+  from {
+    color: black;
+  }
+  to {
+    color: red;
+  }
 }
 
 ion-content {

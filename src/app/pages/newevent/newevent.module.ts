@@ -25,4 +25,4 @@ const routes: Routes = [
   ],
   declarations: [NeweventPage]
 })
-export class NeweventPageModule {}
+export class NeweventPageModule { }

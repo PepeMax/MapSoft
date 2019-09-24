@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { NeweventService } from 'src/app/services/newevent.service';
 
 @Component({
   selector: 'app-events',
@@ -14,13 +15,33 @@ export class EventsPage implements OnInit {
   public events;
   public learnMore = [];
 
-  constructor(public navCtrl: NavController, public storage: Storage) { }
+  constructor(
+    public navCtrl: NavController,
+    public storage: Storage,
+    private neweventService: NeweventService
+  ) { }
 
-  async doRefresh(val) {
+  async ngOnInit() {
+    this.storage.get('tokenAuth').then((valToken) => {
+      this.authToken = valToken;
+    });
+    this.getEventFireBase();
+  }
+
+  async getEventFireBase() {
+    this.neweventService.getEventsFromServer()
+      .subscribe((events) => {
+        console.log(events);
+        this.events = events
+        this.storage.set('badge', this.events.length);
+      });
+  }
+
+  doRefresh(val) {
     setTimeout(() => {
       val.target.complete();
     }, 2000);
-    this.events = JSON.parse(await this.storage.get('events'));
+    this.getEventFireBase();
   }
 
   addEvent() {
@@ -41,13 +62,6 @@ export class EventsPage implements OnInit {
       this.learnMore[index] = false;
     }
     this.learnMore[index] = !this.learnMore[index];
-  }
-
-  async ngOnInit() {
-    this.storage.get('tokenAuth').then((valToken) => {
-      this.authToken = valToken;
-    });
-    this.events = JSON.parse(await this.storage.get('events'));
   }
 
 }

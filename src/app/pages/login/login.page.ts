@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     this.storage.ready().then(() => {
     });
+
   }
 
 }

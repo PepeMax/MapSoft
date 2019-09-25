@@ -46,6 +46,8 @@ export class EventsPage implements OnInit {
 
   addEvent() {
     this.navCtrl.navigateForward('/newevent')
+    this.getEventFireBase();
+
   }
 
   editEvent() {

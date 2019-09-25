@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
-import { AppVersion } from '@ionic-native/app-version/ngx';
 
 @Component({
   selector: 'app-settings',
@@ -12,10 +11,9 @@ export class SettingsPage implements OnInit {
 
   darkVal: boolean = false;
   public authToken: boolean = false;
-  public versionnumber;
-  public test;
+  public versionNumber;
 
-  constructor(public navCtrl: NavController, public storage: Storage, private appVersion: AppVersion) { }
+  constructor(public navCtrl: NavController, public storage: Storage) { }
 
   setval() {
     console.log(this.darkVal);
@@ -38,6 +36,7 @@ export class SettingsPage implements OnInit {
     this.storage.get('tokenAuth').then((valToken) => {
       this.authToken = valToken;
     });
-    this.versionnumber = this.appVersion.getVersionNumber();
+    // console.log(this.appVersion.getVersionNumber())
+
   }
 }

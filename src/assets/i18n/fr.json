@@ -12,7 +12,8 @@
         "FROM": "du ",
         "TO": "au ",
         "AT": "à",
-        "OK": "OK"
+        "OK": "OK",
+        "VERSION": "1.0.0"
     },
     "EVENTS": {
         "TITLE": "Événements",

@@ -86,6 +86,7 @@
         "FIELD_ADRESS": "Adresse du terrain",
         "FIELD_CITY": "Ville du terrain",
         "MEMBERS": "Nombre de membres" ,
+        "SEND": "L'envoie de ces données ce fait par mail, pour ce faire, préferez une application de mail prenant en charge les mails HTML ",
 
         "REGISTER_REQUEST": "Votre demande de compte à bien était prise en charge"
     }

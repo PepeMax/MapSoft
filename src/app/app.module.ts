@@ -12,6 +12,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 import { NeweventService } from './services/newevent.service';
 
@@ -40,6 +41,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     NeweventService,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
 
   ],

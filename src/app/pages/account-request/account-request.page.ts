@@ -3,18 +3,32 @@ import { NavController, AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-account-request',
   templateUrl: './account-request.page.html',
   styleUrls: ['./account-request.page.scss'],
 })
+
 export class AccountRequestPage implements OnInit {
 
   toatsvalue = this.trans.instant('ACCOUNT_REQUEST.REGISTER_REQUEST');
 
-  constructor(public navCtrl: NavController, public alertController: AlertController, public toastController: ToastController, public trans: TranslateService) { }
+  private _email = {
+    to: 'maxime.denost@laposte.net',
+    attachments: [],
+    subject: 'Demande de compte',
+    body: '',
+    isHtml: true
+  };
+
+  constructor(
+    public navCtrl: NavController, 
+    public alertController: AlertController, 
+    public toastController: ToastController,
+    public trans: TranslateService, 
+    private emailComposer: EmailComposer) { }
 
   ngOnInit() {
   }
@@ -101,17 +115,24 @@ export class AccountRequestPage implements OnInit {
           text: this.trans.instant('COMMON.OK'),
           handler: (alertData) => {
             console.log('set mail');
+            let str = "Nom : " + alertData.lastname + "<br>";
+            str += "Prénom : " + alertData.firstname + "<br>";
+            str += "Fonction : " + alertData.function + "<br>";
+            str += "Société : " + alertData.society + "<br>";
+            str += "Email : " + alertData.mail + "<br>";
+            str += "Type de terrain : " + alertData.field_type + "<br>";
+            str += "Adresse du terrain : " + alertData.field_adress + "<br>";
+            str += "Ville du terrain : " + alertData.field_city + "<br>";
+            str += "Nombre de membres: " + alertData.members + "<br>";
+            this._email.body = str;
+            this.emailComposer.open(this._email);
             console.log(JSON.stringify(alertData));
             this.okRegister();
-
-
           }
         }
       ]
     });
-
     await alert.present();
   }
-
 
 }

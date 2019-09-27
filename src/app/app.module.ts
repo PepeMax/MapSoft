@@ -15,6 +15,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 import { NeweventService } from './services/newevent.service';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,6 +43,7 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     NeweventService,
     EmailComposer,
+    FormsModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
 
   ],

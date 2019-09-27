@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { NgModel } from '@angular/forms';
+import { NgModel, FormControl, Validators, ReactiveFormsModule  } from '@angular/forms';
 import { ConditionalExpr } from '@angular/compiler';
 import { ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
@@ -85,4 +85,5 @@ export class NeweventPage implements OnInit {
     let events: any[] = JSON.parse(await this.storage.get('events'));
     this.neweventService.AddEventsOnServer(events);
   }
+  
 }

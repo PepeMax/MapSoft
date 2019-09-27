@@ -47,9 +47,10 @@
         "URL": "Url pour reservation :",
         "INFOS": "Infos complémentaire :",
         "RULES": "Règles :",
+        "*": "Champs requis",
         "ADD_EVENT": "Ajouter l'événement",
         
-        "LAST_NAME": "Nom",
+        "LAST_NAME": "Nom ou surnom",
         "FIRST_NAME": "Prénom",
         "MAIL": "Email",
         "TEL": "Numéro de téléphone"

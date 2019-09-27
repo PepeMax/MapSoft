@@ -17,7 +17,6 @@ export class SettingsPage implements OnInit {
 
   setval() {
     console.log(this.darkVal);
-    console.log(this.authToken);
   }
 
   goLogin() {
@@ -36,7 +35,5 @@ export class SettingsPage implements OnInit {
     this.storage.get('tokenAuth').then((valToken) => {
       this.authToken = valToken;
     });
-    // console.log(this.appVersion.getVersionNumber())
-
   }
 }

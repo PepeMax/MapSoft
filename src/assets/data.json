@@ -1,0 +1,22 @@
+{
+    "properties": [
+        {
+            "city": "Salles",
+            "state": "FR",
+            "long": -0.8656256,
+            "lat": 44.5471298
+        },
+        {
+            "city": "Biganos",
+            "state": "FR",
+            "long": -0.976538,
+            "lat": 44.642195
+        },
+        {
+            "city": "Mios",
+            "state": "FR",
+            "long": -0.939087,
+            "lat": 44.605475
+        }
+    ]
+} 

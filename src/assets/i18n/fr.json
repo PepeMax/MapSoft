@@ -13,7 +13,8 @@
         "TO": "au ",
         "AT": "à",
         "OK": "OK",
-        "VERSION": "1.0.0"
+        "NVERSION": "1.0.0",
+        "VERSION": "Version : "
     },
     "EVENTS": {
         "TITLE": "Événements",
